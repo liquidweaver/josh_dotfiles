@@ -1,0 +1,24 @@
+[user]
+	name = Joshua Weaver
+	email = joshuaweaver@gmail.com
+[core]
+	excludesfile = /Users/joshua/.gitignore_global
+[color]
+	ui = true
+[alias]
+	st = status
+[merge]
+	tool = Kaleidoscope
+[push]
+	default = simple
+[difftool "Kaleidoscope"]
+	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[diff]
+	tool = Kaleidoscope
+[difftool]
+	prompt = false
+[mergetool "Kaleidoscope"]
+	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+	trustExitCode = true
+[mergetool]
+	prompt = false
